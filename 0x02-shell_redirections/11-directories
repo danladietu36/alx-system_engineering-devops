@@ -1,2 +1,2 @@
-#!/bin/bash 
-find . -name 0x02-shell_redirections -type d | wc -l 
+#!/bin/bash
+ls -t | head
