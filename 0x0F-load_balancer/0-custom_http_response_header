@@ -11,5 +11,7 @@ sudo -i "s/server_name _;/$replace_string_with/" /etc/ngnx/sites-enabled/default
 
 # Create an error page and add aa redirect for error 404
 echo "Ceci n'est pas une page" | sudo /var/www/html/404.html
-replace-string_with="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\troot \/var/www/html;\n\t\tinternal;\n\t}"
-sudo -i "s/listen 80 default_server;/$replace-string_with/" /etc/nginx/sites-enabled/default
+replace_string_with="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\troot \/var/www/html;\n\t\tinternal;\n\t}"
+sudo -i "s/listen 80 default_server;/$replace_string_with/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
