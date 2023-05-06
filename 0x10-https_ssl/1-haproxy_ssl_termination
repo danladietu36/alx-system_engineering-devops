@@ -40,7 +40,7 @@ frontend  justice-frontend-http
         default_backend justice-backend
 
 frontend justice-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+	bind *:443 ssl crt /etc/haproxy/certs/www.justicedan.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	default_backend justice-backend
 
