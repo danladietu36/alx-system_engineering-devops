@@ -33,19 +33,19 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend  justice-frontend-http
+frontend  justicedan-frontend-http
         bind *:80
         mode http
 	http-request set-header X-Forwarded-Proto http
-        default_backend justice-backend
+        default_backend justicedan-backend
 
-frontend justice-frontend-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.ehoneah.tech.pem
+frontend justicedan-frontend-https
+	bind *:443 ssl crt /etc/haproxy/certs/www.justicedan.tech.pem
 	http-request set-header X-Forwarded-Proto https
 	http-request redirect scheme https code 301 unless { ssl_fc }
-	default_backend justice-backend
+	default_backend justicedan-backend
 
-backend justice-backend
+backend justicedan-backend
         balance roundrobin
         server 63210-web-01 34.239.248.111 check
         server 63210-web-02 54.175.89.17 check
