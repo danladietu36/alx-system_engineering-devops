@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# A bash script that accepts one argument and
-# runs the "whoami" command
+# A bash script that accepts one argument and run 'whoami'
 
 sudo -i "$1" whoami
