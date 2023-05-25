@@ -17,15 +17,16 @@ if __name__ == "__main__":
         if re.fullmatch(r'\d+', sys.argv[1]):
             id = int(sys.argv[1])
             user_res = requests.get('{}/users/{}'.format(API, id)).json()
-            todos_res  = requests.get('{}/todods'.format(API)).json()
+            todos_res = requests.get('{}/todos'.format(API)).json()
             username = user_res.get('name')
-            todos = list(filter(lamda x: x.get('completed'), todos))
+            todos = list(filter(lambda x: x.get('userId') == id, todos_res))
+            todos_done = list(filter(lambda x: x.get('completed'), todos))
             print(
-                    'Employee {} is done with tasks({}/{}:'.format(
-                        username,
-                        len(todos_done),
-                        len(todos)
-                        )
-                    )
+                'Employee {} is done with tasks({}/{}):'.format(
+                    username,
+                    len(todos_done),
+                    len(todos)
+                )
+            )
             for todo_done in todos_done:
-                print('\t{}'.format(todo_done.get('title')))
+                print('\t {}'.format(todo_done.get('title')))
