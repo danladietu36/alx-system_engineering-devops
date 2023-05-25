@@ -19,7 +19,7 @@ if __name__ == '__main__':
     response = requests.get(todoUrl)
     tasks = response.json()
 
-    dic = {employeeId: []}
+    dictionary = {employeeId: []}
     for task in tasks:
         dictionary[employeeId].append({
             "task": task.get('title'),
@@ -27,4 +27,4 @@ if __name__ == '__main__':
             "username": username
         })
     with open('{}.json'.format(employeeId), 'w') as filename:
-        json.dump(dic, filename)
+        json.dump(dictionary, filename)
