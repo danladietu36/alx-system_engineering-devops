@@ -8,14 +8,14 @@ import sys
 
 if __name__ == '__main__':
     employeeId = sys.argv[1]
-    base_url = "https://jsonplaceholder.typicode.com/users"
-    url = base_url + "/" + employeeId
+    baseurl = "https://jsonplaceholder.typicode.com/users"
+    url = baseurl + "/" + employeeId
 
     response = requests.get(url)
     username = response.json().get('username')
 
-    todo_url = url + "/todos"
-    response = requests.get(todo_url)
+    todourl = url + "/todos"
+    response = requests.get(todourl)
     tasks = response.json()
 
     with open('{}.csv'.format(employeeId), 'w') as file:
