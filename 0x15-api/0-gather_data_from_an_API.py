@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 A script that uses 'https://jsonplaceholder.typicode.com/todos/1'
-RESTFUL API for a given employee ID, and returns information 
+RESTFUL API for a given employee ID, and returns information
 about his/her TODO list progress
 """
 import requests
