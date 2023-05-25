@@ -10,11 +10,11 @@ if __name__ == '__main__':
     base_url = "https://jsonplaceholder.typicode.com/users"
     url = base_url + "/" + employeeId
 
-    response = requests.get(url)
-    username = response.json().get(username)
+    response = requests.get('url')
+    username = response.json().get('username')
 
     todo_url = url + "/todos"
-    response = requests.get(todo_url)
+    response = requests.get('todo_url')
     tasks = response.json()
 
     with open('{}.csv'.format(employeeId), 'w') as fileName:
