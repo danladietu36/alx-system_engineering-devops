@@ -7,9 +7,9 @@ import sys
 
 
 if __name__ == '__main__':
-    url = "https://jsonplaceholder.typicode.com/users"
+    root_url = "https://jsonplaceholder.typicode.com/users"
 
-    response = requests.get(url)
+    response = requests.get(root_url)
     users = response.json()
 
     dictionary = {}
