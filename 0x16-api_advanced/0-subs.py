@@ -6,7 +6,7 @@ A python script to return number of subscribers for a given subreddit
 from requests import get
 
 
-def num_of_subscribers(subreddit):
+def number_of_subscribers(subreddit):
     """
     function that queries the Reddit API and returns the number of subscribers
     total subscribers for a given subreddit.
