@@ -1,10 +1,10 @@
-# A puppet script that replaces a line of code in a file on a server
+# A puppet manuscript to replace a line in a file on a server
 
-$file = "/var/html/wp-settings.php"
+$file = '/var/www/html/wp-settings.php'
 
-#code to replace the line
+#replace line containing "phpp" with "php"
 
 exec { 'replace_line':
-    command => "sed -i 's/phpp/php/g' ${file}",
-    path => ['/bin', '/usr/bin']
+  command => "sed -i 's/phpp/php/g' ${file}",
+  path    => ['/bin','/usr/bin']
 }
