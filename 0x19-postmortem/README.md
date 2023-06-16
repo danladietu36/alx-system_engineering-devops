@@ -1,6 +1,3 @@
-
-
-
 Top tech requests failure report
 two days ago, it was reported that the Top tech website was returning 500 Error on all requests made on the website routes, signifying that all the services were down. 90% of the users were affected. The root cause was the failure of our master server web-01.
 
@@ -16,3 +13,7 @@ Measures Against Such Problem inthe Future
 Choosing a good and efficient loadbalancing algorithm for your programs
 Keeping an eye on your servers to ensure they are running properly
 Having an extra back-up servers to prevent your program from completely going offline during an issue
+
+
+![image](https://github.com/danladietu36/alx-system_engineering-devops/assets/114702183/aa450a65-1a89-4cad-965c-2aba21bd7cd5)
+
